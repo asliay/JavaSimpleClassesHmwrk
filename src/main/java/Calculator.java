@@ -1,5 +1,5 @@
 public class Calculator {
-
+    // when given no constructor
     public int add(int num1, int num2){
         return num1 + num2;
     }

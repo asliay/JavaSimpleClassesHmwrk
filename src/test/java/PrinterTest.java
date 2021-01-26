@@ -23,14 +23,16 @@ public class PrinterTest {
     }
 
     @Test
-    public void canPrint_true(){
+    public void canPrint(){
         printer.print(5, 4);
         assertEquals(30, printer.getSheets());
         assertEquals(20, printer.getToner());
     }
 
     @Test
-    public void canPrint_false(){
-        assertEquals("Not enough paper/ toner.", printer.print(10,6));
+    public void cantPrint(){
+        printer.print(10, 6);
+        assertEquals(50, printer.getSheets());
+        assertEquals(40, printer.getToner());
     }
 }

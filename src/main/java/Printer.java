@@ -9,19 +9,18 @@ public class Printer {
     }
 
     public int getSheets(){
-        return sheets;
+        return this.sheets;
     }
 
     public int getToner(){
-        return toner;
+        return this.toner;
     }
 
-    public String print(int numPages, int numCopies){
+    public void print(int numPages, int numCopies){
         int printJob = numPages * numCopies;
-        if ((printJob < sheets) && (printJob < toner)) {
-            sheets -= printJob;
-            toner -= printJob;
+        if ((printJob <= this.sheets) && (printJob <= this.toner)) {
+            this.sheets -= printJob;
+            this.toner -= printJob;
         }
-        return "Not enough paper/ toner.";
     }
 }
